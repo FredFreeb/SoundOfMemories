@@ -10,7 +10,7 @@
     <script defer src="/node_modules/jquery/dist/jquery.min.js" ></script>
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="/js/audioPlayer.js"></script>
-
+    <script defer src="/js/yT.js"></script>
 
 
 </head>
@@ -57,9 +57,13 @@
 <!-- MAIN -->
 <main>
     <!--START SECTION 1: vinyl animée avec spotify api -->
-    <section id="vinylPlayer">
+    <section id="vinylPlayer justify-content-center">
         <div class="player-container">
-            <div class="music-player-container is-playing">
+            <div class="album">
+                <div class="album-art"></div>
+                <div class="vinyl  is-playing"></div>
+            </div>
+            <div class="music-player-container ">
                 <div class="music-player">
                     <div class="player-content-container">
                         <h1 class="artist-name">Sound Of Memories</h1>
@@ -73,10 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="album">
-                <div class="album-art"></div>
-                <div class="vinyl"></div>
-            </div>
+
         </div>
     </section>
     <!-- END SECTION 1  -->
@@ -110,9 +111,11 @@
                     <img src="/assets/gal8.jpg" class="img-fluid">
                 </div>
             </div>
-            <h2>YouTube Video</h2>
-            <div id="player"></div>
         </div>
+    </section>
+    <section>
+            <h2>YouTube Video</h2>
+            <div id="player"><iframe allow="encrypted-media" src="https://www.youtube.com/embed/VIDEO_ID"></iframe></div>
     </section>
     <!-- END SECTION 2 -->
 </main>
