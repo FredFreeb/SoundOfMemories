@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Sound of Memories - Official WebSite</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="/sass/style.css">
     <script defer src="https://kit.fontawesome.com/2cf8922f6a.js" crossorigin="anonymous"></script>
     <script defer src="/node_modules/jquery/dist/jquery.min.js" ></script>
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="/js/audioPlayer.js"></script>
 
 
 
@@ -45,8 +46,8 @@
                     <span class="fa-solid fa-dna"> THE BAND </span></a>
                 <ul class="dropdown-menu collapse" aria-labelledby="navbarDropdownMenuLink" id="collapseExample">
                 <li><a class="dropdown-item" href="/html/about.html">About Us <span class="fa-solid fa-home"></span></a></li>
-                <li><a class="dropdown-item" href="/html/contact.html">Contact us <i class="fa-regular fa-envelope"></i></a></li>
-                <li><a class="dropdown-item" href="/html/mentions.html">Mentions légales </a></li>
+                <li><a class="dropdown-item" href="/html/contact.html">Contact us <span class="fa-regular fa-envelope"></span></a></li>
+                <li><a class="dropdown-item" href="/html/mentions.html">Mentions légales <span class="fa-solid fa-scale-balanced"></span></a></li>
                 </ul>
             </li>
             </ul>
@@ -55,7 +56,65 @@
     </nav>
 <!-- MAIN -->
 <main>
-
+    <!--START SECTION 1: vinyl animée avec spotify api -->
+    <section id="vinylPlayer">
+        <div class="player-container">
+            <div class="music-player-container is-playing">
+                <div class="music-player">
+                    <div class="player-content-container">
+                        <h1 class="artist-name">Sound Of Memories</h1>
+                        <h2 class="album-title">The Sand Within</h2>
+                        <h3 class="song-title">"Altered"</h3>
+                        <div class="music-player-controls">
+                            <div class="control-back"></div>
+                            <div class="control-play"></div>
+                            <div class="control-forwards"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="album">
+                <div class="album-art"></div>
+                <div class="vinyl"></div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECTION 1  -->
+    <!-- START SECTION 2: Gallerie photos et vidéos youtube avec api youtube -->
+    <section>
+        <div class="container">
+        <h2>Gallerie</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/gal1.JPG" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal2.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal3.JPG" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal4.JPG" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal5.JPG" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal6.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal7.JPG" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="/assets/gal8.jpg" class="img-fluid">
+                </div>
+            </div>
+            <h2>YouTube Video</h2>
+            <div id="player"></div>
+        </div>
+    </section>
+    <!-- END SECTION 2 -->
 </main>
 <!-- Start Footer -->
     <footer class="text-center text-lg-start bg-dark">
