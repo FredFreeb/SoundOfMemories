@@ -6,20 +6,22 @@
     <title>Sound of Memories - Official WebSite</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/sass/style.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick.css">
     <script defer src="https://kit.fontawesome.com/2cf8922f6a.js" crossorigin="anonymous"></script>
     <script defer src="/node_modules/jquery/dist/jquery.min.js" ></script>
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script defer src="/js/audioPlayer.js"></script>
     <script defer src="/js/yT.js"></script>
-
+    <script defer src="/node_modules/slick-carousel/slick/slick.js"></script>
+    <script defer src="/node_modules/slick-carousel/slick/slick.js"></script>
 
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-black align-items-center" id="headerNav">
         <div class="col">
-        <a class="navbar-brand d-block col-8 d-lg-none" href="#">
-            <img src="/assets/Logo.png" width="200">
+        <a class="navbar-brand d-block justify-content-center d-lg-none" href="#">
+            <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/Logo.png" width="200">
         </a>
         <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +37,7 @@
             </li>
             <li class="nav-item d-none d-lg-block">
                 <a class="nav-link mx-2" href="#">
-                <img src="/assets/Logo.png" height="80" />
+                <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/Logo.png" height="80" />
                 </a>
             </li>
             <li class="nav-item">
@@ -57,62 +59,107 @@
 <!-- MAIN -->
 <main>
     <!--START SECTION 1: vinyl animée avec spotify api -->
-    <section id="vinylPlayer justify-content-center">
-        <div class="player-container">
-            <div class="album">
-                <div class="album-art"></div>
-                <div class="vinyl  is-playing"></div>
-            </div>
-            <div class="music-player-container ">
-                <div class="music-player">
-                    <div class="player-content-container">
-                        <h1 class="artist-name">Sound Of Memories</h1>
-                        <h2 class="album-title">The Sand Within</h2>
-                        <h3 class="song-title">"Altered"</h3>
-                        <div class="music-player-controls">
-                            <div class="control-back"></div>
-                            <div class="control-play"></div>
-                            <div class="control-forwards"></div>
-                        </div>
+    <section id="vinylPlayer">
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+            <div class="player-container">
+                <div class="album-art">
+                <div class="album-cover"></div>
+                <div class="vinyl is-playing">
+                    <div class="center-hole">
+                    <img class="vinyl-art" src=""  alt="Nom de l'album">    
                     </div>
                 </div>
+                </div>
+                <div class="music-player-container">
+                <div class="music-player">
+                    <audio controls id="audio-player"></audio>
+                    <div class="player-content-container">
+                    <!-- le reste du contenu de la music-player -->
+                    <h2 class="artist-name">Sound Of Memories</h2>
+                    <div class="album-select-container">
+                        <label for="album-select">Album:</label>
+                        <select id="album-select">
+                        <option value=""></option>
+                        </select>
+                    </div>
+                    <h3 class="album-title">"Nom de l'album"</h3>
+                    <h3 class="song-title">"Nom du titre"</h3>
+                    <div class="music-player-controls">
+                        <div class="control-back"></div>
+                        <div class="control-play" id="play-button"</div>
+                        <div class="control-forwards"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
-
+            </div>
+        </div>
         </div>
     </section>
+    
     <!-- END SECTION 1  -->
     <!-- START SECTION 2: Gallerie photos et vidéos youtube avec api youtube -->
     <section>
         <h2>Gallerie</h2>
-            <ul class=".gallery">
+            <ul class="gallery">
                 <li>
-                <img src="/assets/gal1.JPG" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal1.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal2.jpg" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal2.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal3.JPG" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal3.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal4.JPG" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal4.jpg" class="img-fluid">
                 </div>
                 <li>
-                    <img src="/assets/gal5.JPG" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal5.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal6.jpg" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal6.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal7.JPG" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal7.jpg" class="img-fluid">
                 </li>
                 <li>
-                    <img src="/assets/gal8.jpg" class="img-fluid">
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal8.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal9.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal10.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal11.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal12.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal13.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal14.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal15.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal16.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal18.jpg" class="img-fluid">
                 </li>
             </ul>
     </section>
     <section>
-        <div class="youtube-container"></div>
+        <div class="carousel"></div>
     </section>
     <!-- END SECTION 2 -->
 </main>
