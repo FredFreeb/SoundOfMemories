@@ -7,8 +7,67 @@ body {
     line-height: 80px;
   }
 }
-*, *:before, *:after {
+.contact-form-container {
+  background-image: url("/assets/enveloppe.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.contact-form-wrapper {
+  background-color: rgba(169, 170, 169, 0.8);
+  padding: 3vw;
+  margin: 3vw;
+  border-radius: 2vw;
+  max-width: 80vw;
+  margin: auto;
+}
+
+.contact-form-wrapper h1 {
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-form-wrapper {
+    padding: 3vw;
+    margin: 3vw;
+    border-radius: 1vw;
+    max-width: 70vw;
+  }
+  .contact-form-wrapper h1 {
+    margin-bottom: 2vw;
+  }
+}
+.box:hover .cover {
+  top: 0;
+}
+
+.cover {
+  position: relative;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  transition: top 0.3s ease;
+}
+
+.cover h3, .cover p, .social {
+  margin: 10px;
+}
+
+.social a {
+  color: white;
+  margin-right: 10px;
+}
+
+*, ::before, ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Ajoutez un conteneur avec une position relative autour de .music-player-container */
@@ -126,59 +185,34 @@ body {
   top: 0;
 }
 
-.contact-form-container {
-  background-image: url("/assets/enveloppe.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  text-align: center;
+li {
+  text-decoration: none;
 }
 
-.contact-form-wrapper {
-  background-color: rgba(169, 170, 169, 0.8);
-  padding: 3vw;
-  margin: 3vw;
-  border-radius: 2vw;
-  max-width: 80vw;
-  margin: auto;
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  padding: 0 14px;
 }
 
-.contact-form-wrapper h1 {
-  text-align: center;
-  margin-bottom: 3vw;
+.gallery::after {
+  content: "";
+  display: block;
+  flex-grow: 10;
 }
 
-@media only screen and (min-width: 768px) {
-  .contact-form-wrapper {
-    padding: 3vw;
-    margin: 3vw;
-    border-radius: 1vw;
-    max-width: 70vw;
-  }
-  .contact-form-wrapper h1 {
-    margin-bottom: 2vw;
-  }
-}
-.box:hover .cover {
-  top: 0;
+.gallery li {
+  list-style-type: none;
+  height: 250px;
+  flex-grow: 1;
 }
 
-.cover {
-  position: relative;
-  top: 100%;
-  left: 0;
+.gallery img {
   width: 100%;
   height: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  transition: top 0.3s ease;
-}
-
-.cover h3, .cover p, .social {
-  margin: 10px;
-}
-
-.social a {
-  color: white;
-  margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
