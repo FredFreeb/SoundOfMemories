@@ -1,3 +1,4 @@
+let nextPageToken =""
 $(document).on(function() {
     getVideos().then(createCarousel);
 });

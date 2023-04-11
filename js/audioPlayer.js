@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
   const CLIENT_ID = '658de159b9804a9d92bf09f4721eb739'; // Votre client ID
   const CLIENT_SECRET = '07a48b8c5e5d45189ee3937f64468d96'; // Votre client secret
   const ARTIST_ID = '0x3MDVFQVxfBjXgkuHW6v1'; // ID de l'artiste
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(data => {
       accessToken = data.access_token;
+      console.log(data.access_token)
 
       // Récupérer les IDs et les images des albums de l'artiste
       fetch(`https://api.spotify.com/v1/artists/${ARTIST_ID}/albums?include_groups=album,single&market=FR&limit=50`, {
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           console.log('je suis 2eme fetch de spotifyJS')
           if (albums && albums.length > 0) { // Vérifier que "albums" est défini et non vide
-            console.log('je suis dans if albums de js et je demande :'+ albums.data); // affiche les IDs et les images des albums dans la console
+            console.log('je suis dans if albums de js et je demande :'+ albums.items); // affiche les IDs et les images des albums dans la console
         
             // Mettre à jour le titre et la pochette de l'album
             const albumArt = document.querySelector('.album-art');
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
               document.querySelector('.vinyl-art').src = album.image;
               const albumCover = document.querySelector('.album-cover');
               if (albumCover) {
-                albumCover.style.width = '20%';
+                albumCover.style.width = '10%';
                 albumCover.style.height = 'auto';
               }
               const vinylArt = document.querySelector('.vinyl-art');
@@ -58,26 +60,38 @@ document.addEventListener('DOMContentLoaded', function () {
               albumTitle.textContent = album.name;
             }
             updateAlbum(albums[0]); // Afficher les informations de l'album par défaut
-        
+
             // Créer des options pour la liste déroulante des albums
             const albumOptions = albums.map(album => {
               return `<option value="${album.id}">${album.name}</option>`
             });
+
             // Mettre à jour la liste déroulante des albums
             const albumSelect = document.querySelector('#album-select');
             if (albumSelect) { // Vérifier que "albumSelect" est défini
               albumSelect.innerHTML = albumOptions.join('');
             }
-
-            // Ajouter un événement click pour mettre à jour les informations de l'album lorsque l'utilisateur sélectionne un album différent
+            const iframeContainer = document.getElementById('spotify-iframe-container');
+            // Ajouter un événement change pour mettre à jour l'iframe lorsque l'utilisateur sélectionne un album différent
             if (albumSelect) { // Vérifier que "albumSelect" est défini
               albumSelect.addEventListener('change', (event) => {
                 const selectedAlbum = albums.find(album => album.id === event.target.value);
                 if (selectedAlbum) {
                   updateAlbum(selectedAlbum);
+                  if (iframeContainer && selectedAlbum.id) {
+                    iframeContainer.innerHTML = ''; // Supprimer l'ancien iframe
+                    const iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', `https://open.spotify.com/embed/album/${selectedAlbum.id}`);
+                    iframe.setAttribute('width', '300');
+                    iframe.setAttribute('height', '380');
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allowtransparency', 'true');
+                    iframe.setAttribute('allow', 'encrypted-media');
+                    iframeContainer.appendChild(iframe); // Ajouter le nouvel iframe au conteneur
+                  }
                 }
               });
-            }
+            }  
           }
           })
           .catch(error => {
@@ -85,4 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
     });
   });
+//////////////////// Controleur et player
+// Récupérer l'élément audio
+const audioPlayer = document.getElementById('spotify-player');
 

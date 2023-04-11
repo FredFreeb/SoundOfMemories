@@ -10,9 +10,8 @@
     <script defer src="https://kit.fontawesome.com/2cf8922f6a.js" crossorigin="anonymous"></script>
     <script defer src="/node_modules/jquery/dist/jquery.min.js" ></script>
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="/node_modules/slick-carousel/slick/slick.js"></script>
     <script defer src="/js/audioPlayer.js"></script>
-    <script defer src="/node_modules/slick-carousel/slick/slick.js"></script>
-    <script defer src="/node_modules/slick-carousel/slick/slick.js"></script>
     <script defer src="/js/yT.js"></script>
 </head>
 <body>
@@ -58,6 +57,7 @@
 <!-- MAIN -->
 <main>
     <!--START SECTION 1: vinyl animée avec spotify api -->
+    
     <section id="vinylPlayer">
         <div class="container">
         <div class="row justify-content-center">
@@ -73,22 +73,20 @@
                 </div>
                 <div class="music-player-container">
                 <div class="music-player">
-                    <audio controls id="audio-player"></audio>
+                    <h3 class="album-title"></h3>
                     <div class="player-content-container">
                     <!-- le reste du contenu de la music-player -->
-                    <h2 class="artist-name">Sound Of Memories</h2>
+                    <h2 class="artist-name"></h2>
                     <div class="album-select-container">
-                        <label for="album-select">Album:</label>
+                        <label for="album-select">Your choice:</label>
                         <select id="album-select">
                         <option value=""></option>
                         </select>
                     </div>
-                    <h3 class="album-title">"Nom de l'album"</h3>
-                    <h3 class="song-title">"Nom du titre"</h3>
+
+
                     <div class="music-player-controls">
-                        <div class="control-back"></div>
-                        <div class="control-play" id="play-button"</div>
-                        <div class="control-forwards"></div>
+                        <div id="spotify-iframe-container"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2yemZEPhsqWdvWnKJh7rzd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
                     </div>
                     </div>
                 </div>
