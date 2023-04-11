@@ -2,7 +2,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 765px) {
   .nav-item {
     line-height: 80px;
   }
@@ -73,6 +73,11 @@ body {
 .cover .social {
   text-align: center;
   margin-top: 20px;
+}
+
+#bio {
+  background-image: url("https://raw.githubusercontent.com/FredFreeb/assets/SOM/bio.jpg");
+  background-size: cover;
 }
 
 #vinylPlayer {
