@@ -27,6 +27,7 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	animation: rotate 1.8s infinite linear;
 }
 
 .center-hole {
@@ -59,7 +60,14 @@ label {
 	height: auto;
 	border-radius: 50%;
 }
-
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 /////// Gallerie de photos
 li{
 	text-decoration: none;

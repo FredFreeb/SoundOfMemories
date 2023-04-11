@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
               image: item.images[0].url // utiliser la première image de l'album
             }
           });
-        console.log('je suis...')
+          console.log('je suis 2eme fetch de spotifyJS')
           if (albums && albums.length > 0) { // Vérifier que "albums" est défini et non vide
-            console.log('je suis dans if albums'+ albums); // affiche les IDs et les images des albums dans la console
+            console.log('je suis dans if albums de js et je demande :'+ albums.data); // affiche les IDs et les images des albums dans la console
         
             // Mettre à jour le titre et la pochette de l'album
             const albumArt = document.querySelector('.album-art');
@@ -57,47 +57,32 @@ document.addEventListener('DOMContentLoaded', function () {
               artistName.textContent = 'Sound Of Memories';
               albumTitle.textContent = album.name;
             }
-            console.log('je suis...')
             updateAlbum(albums[0]); // Afficher les informations de l'album par défaut
         
-            // Ajouter un événement click pour mettre à jour les informations de l'album lorsque l'utilisateur sélectionne un album différent
+            // Créer des options pour la liste déroulante des albums
+            const albumOptions = albums.map(album => {
+              return `<option value="${album.id}">${album.name}</option>`
+            });
+            // Mettre à jour la liste déroulante des albums
             const albumSelect = document.querySelector('#album-select');
             if (albumSelect) { // Vérifier que "albumSelect" est défini
+              albumSelect.innerHTML = albumOptions.join('');
+            }
+
+            // Ajouter un événement click pour mettre à jour les informations de l'album lorsque l'utilisateur sélectionne un album différent
+            if (albumSelect) { // Vérifier que "albumSelect" est défini
               albumSelect.addEventListener('change', (event) => {
-                console.log('je suis...ds if albumselect')
                 const selectedAlbum = albums.find(album => album.id === event.target.value);
                 if (selectedAlbum) {
                   updateAlbum(selectedAlbum);
                 }
               });
             }
-            console.log('je suis avant le play-button')
-            document.querySelector('#play-button').addEventListener('click', function () {
-            // Charger et jouer la chanson correspondante
-            console.log('je suis dans le play-button')
-            const audioContext = new AudioContext();
-            const source = audioContext.createBufferSource();
-            request.open('GET', `https://api.spotify.com/v1/albums/${albums[0].id}/tracks?market=FR`);
-            request.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-            request.responseType = 'json';
-            request.send();
-            request.onload = function () {
-              const tracks = request.response.items;
-              const trackUrl = tracks[0].preview_url;
-              request.open('GET', trackUrl, true);
-              request.responseType = 'arraybuffer';
-              request.onload = function () {
-                const audioData = request.response;
-                audioContext.decodeAudioData(audioData, function (buffer) {
-                  source.buffer = buffer;
-                  source.connect(audioContext.destination);
-                  source.start(0);
-                });
-              };
-              request.send();
-            };
+          }
+          })
+          .catch(error => {
+            console.error(error);
           });
-        }
-      })
-    })
-})
+    });
+  });
+

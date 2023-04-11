@@ -12,12 +12,22 @@
     background: rgba(0, 0, 0, 0.8);
     transition: top 0.3s ease;
 }
-
-.cover h3, .cover p, .social {
-    margin: 10px;
+.cover h3 {
+    margin-top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
 }
 
-.social a {
-    color: white;
-    margin-right: 10px;
+.cover p {
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.cover .social {
+    text-align: center;
+    margin-top: 20px;
 }
