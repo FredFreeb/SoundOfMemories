@@ -59,44 +59,49 @@
     <!--START SECTION 1: vinyl animée avec spotify api -->
     
     <section id="vinylPlayer">
-            <div class="col-lg-5 col-md-5">
+            <div class="p-2">
                 <div class="player-container">
-                <div class="album-art">
-                    <div class="album-cover"></div>
-                    <div class="vinyl is-playing">
-                    <div class="center-hole">
-                        <img class="vinyl-art" src=""  alt="Nom de l'album">    
+                <div class="row">
+                    <div class="col-md-6">
+                    <div class="album-art" style="background-image: url('https://i.scdn.co/image/ab67616d0000b2738b69d42d8d332cda9ff05cba');">
+                        <div class="album-cover"></div>
+                        <div class="vinyl is-playing">
+                        <div class="center-hole">
+                            <img class="vinyl-art" src=""  alt="Nom de l'album">    
+                        </div>
+                        </div>
                     </div>
                     </div>
+                    <div class="col-md-6 justify-content-between">
+                    <div class="music-player-controls">
+                        <div id="spotify-iframe-container"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2yemZEPhsqWdvWnKJh7rzd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
                     </div>
-                <div class="music-player-container">
-                    <div class="music-player">
-                    <h3 class="album-title"></h3>
-                    <div class="player-content-container">
-                        <!-- le reste du contenu de la music-player -->
-                        <h2 class="artist-name"></h2>
-                        <div class="album-select-container">
-                        <label for="album-select">Your choice:</label>
-                        <select id="album-select">
-                            <option value=""></option>
-                        </select>
+                    <div class="music-player-container">
+                        <div class="music-player">
+                        <h3 class="album-title"></h3>
+                        <div class="player-content-container">
+                            <!-- le reste du contenu de la music-player -->
+                            <h2 class="artist-name"></h2>
+                            <div class="album-select-container">
+                            <label for="album-select">Your choice:</label>
+                            <select id="album-select">
+                                <option value=""></option>
+                            </select>
+                            </div>
+                        </div>
                         </div>
                     </div>
                     </div>
                 </div>
 
-
-                <div class="music-player-controls">
-                <div id="spotify-iframe-container"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2yemZEPhsqWdvWnKJh7rzd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
                 </div>
             </div>
-                </div>
-                </div>
+            
     </section>
     <hr>
 
 <!-- END SECTION 1  -->
-<!-- START SECTION 2: Gallerie photos et vidéos youtube avec api youtube -->
+<!-- START SECTION 2: Gallerie photos (j'aurai peut-être pu faire une api maison?) -->
     
     <section>
         <h2>Gallerie</h2>
@@ -162,14 +167,17 @@
     </section>
 <hr>
     <!-- END SECTION 2 -->
-    <!-- START SECTION 3 : Carousel you tube -->
+
+    <!-- START SECTION 3 : Carousel you tube (tout quasiment dans le js -->
     <section>
-        <div class="carousel"></div>
+        <div class="fade"></div>
     </section>
     <!-- END SECTION 3 -->
+
 </main>
-<!-- Start Footer -->
-    <footer class="text-center text-lg-start bg-dark">
+<!-- End MAIN -->
+<!-- Start FOOTER -->
+    <footer class="text-center justify-content-center text-lg-start bg-dark">
         <div class="row justify-content-center">
             <div class="text-center w-50 ">
             <h2 class="h2 text-success border-bottom p-3 border-light logo">Sound Of Memories Home</h2>

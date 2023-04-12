@@ -100,14 +100,19 @@ document.addEventListener('DOMContentLoaded', function () {
           });
     });
   });
-//////////////////// Controleur et player
-// // Récupérer l'élément audio
-// const audioPlayer = document.getElementById('spotify-player');
-//   // J'écoute l'événement "message"
-//   iframe.addEventListener("load", () => {
-//     iframe.contentWindow.postMessage("Hello from the parent page!", "*");
-//   });
-  
-//   window.addEventListener("message", (event) => {
-//     console.log(`Received message from iframe: ${event.data}`);
-//   });
+//////////////////// Ecouter l'iframe et animer css rotate Vinyl
+// // Récupérer l'iframe de Spotify à partir de son ID
+// let spotifyIframe = document.getElementById('spotify-iframe-container');
+
+// // Accéder à la fenêtre interne de l'iframe
+// let spotifyWindow = spotifyIframe.contentWindow;
+
+// // Récupérer l'élément HTML du bouton Play de Spotify à partir de l'iframe
+// let playButton = spotifyWindow.document.querySelector('.spotify-play-button');
+
+// // Ajouter un gestionnaire d'événements onclick pour le bouton Play
+// playButton.onclick = function() {
+//   // Agir sur la classe scss isPlaying
+//   let isPlayingElement = document.querySelector('.isPlaying');
+//   isPlayingElement.classList.add('active');
+// };

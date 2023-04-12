@@ -264,17 +264,106 @@ li {
 }
 
 .carousel {
-  width: 80%;
-  margin: auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+.carousel .slick-prev, .carousel .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.carousel .slick-prev:before, .carousel .slick-next:before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+}
+.carousel .slick-prev {
+  left: 10px;
+}
+.carousel .slick-prev:before {
+  content: "\f104";
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+}
+.carousel .slick-next {
+  right: 10px;
+}
+.carousel .slick-next:before {
+  content: "\f105";
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+}
+.carousel .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
-
-.slick-slide {
-  margin: 0 20px;
+.carousel .slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
 }
-
-iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
+.carousel .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.carousel .slick-dots li button:hover, .carousel .slick-dots li button:focus {
+  outline: none;
+}
+.carousel .slick-dots li.slick-active button {
+  background-color: white;
+}
+.carousel .slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+.carousel .slick-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.carousel .slick-slide.slick-active {
+  display: block;
+}
+.carousel .slick-initialized {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
