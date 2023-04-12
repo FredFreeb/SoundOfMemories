@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
               albumSelect.innerHTML = albumOptions.join('');
             }
             const iframeContainer = document.getElementById('spotify-iframe-container');
+            
             // Ajouter un événement change pour mettre à jour l'iframe lorsque l'utilisateur sélectionne un album différent
             if (albumSelect) { // Vérifier que "albumSelect" est défini
               albumSelect.addEventListener('change', (event) => {
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   updateAlbum(selectedAlbum);
                   if (iframeContainer && selectedAlbum.id) {
                     iframeContainer.innerHTML = ''; // Supprimer l'ancien iframe
-                    const iframe = document.createElement('iframe');
+                    let iframe = document.createElement('iframe');
                     iframe.setAttribute('src', `https://open.spotify.com/embed/album/${selectedAlbum.id}`);
                     iframe.setAttribute('width', '300');
                     iframe.setAttribute('height', '380');
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     iframe.setAttribute('allow', 'encrypted-media');
                     iframeContainer.appendChild(iframe); // Ajouter le nouvel iframe au conteneur
                   }
-                }
+                }  
               });
             }  
           }
@@ -100,6 +101,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 //////////////////// Controleur et player
-// Récupérer l'élément audio
-const audioPlayer = document.getElementById('spotify-player');
-
+// // Récupérer l'élément audio
+// const audioPlayer = document.getElementById('spotify-player');
+//   // J'écoute l'événement "message"
+//   iframe.addEventListener("load", () => {
+//     iframe.contentWindow.postMessage("Hello from the parent page!", "*");
+//   });
+  
+//   window.addEventListener("message", (event) => {
+//     console.log(`Received message from iframe: ${event.data}`);
+//   });

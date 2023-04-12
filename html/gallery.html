@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-black align-items-center" id="headerNav">
         <div class="col">
-        <a class="navbar-brand d-block justify-content-center d-lg-none" href="#">
+        <a class="navbar-brand justify-content-center d-lg-none" href="#">
             <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/Logo.png" width="200">
         </a>
         <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,42 +59,39 @@
     <!--START SECTION 1: vinyl animée avec spotify api -->
     
     <section id="vinylPlayer">
-        <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
-            <div class="player-container">
+            <div class="col-lg-5 col-md-5">
+                <div class="player-container">
                 <div class="album-art">
-                <div class="album-cover"></div>
-                <div class="vinyl is-playing">
+                    <div class="album-cover"></div>
+                    <div class="vinyl is-playing">
                     <div class="center-hole">
-                    <img class="vinyl-art" src=""  alt="Nom de l'album">    
+                        <img class="vinyl-art" src=""  alt="Nom de l'album">    
                     </div>
-                </div>
-                </div>
+                    </div>
+                    </div>
                 <div class="music-player-container">
-                <div class="music-player">
+                    <div class="music-player">
                     <h3 class="album-title"></h3>
                     <div class="player-content-container">
-                    <!-- le reste du contenu de la music-player -->
-                    <h2 class="artist-name"></h2>
-                    <div class="album-select-container">
+                        <!-- le reste du contenu de la music-player -->
+                        <h2 class="artist-name"></h2>
+                        <div class="album-select-container">
                         <label for="album-select">Your choice:</label>
                         <select id="album-select">
-                        <option value=""></option>
+                            <option value=""></option>
                         </select>
-                    </div>
-
-
-                    <div class="music-player-controls">
-                        <div id="spotify-iframe-container"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2yemZEPhsqWdvWnKJh7rzd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                        </div>
                     </div>
                     </div>
                 </div>
+
+
+                <div class="music-player-controls">
+                <div id="spotify-iframe-container"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2yemZEPhsqWdvWnKJh7rzd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
                 </div>
             </div>
-            </div>
-        </div>
-        </div>
+                </div>
+                </div>
     </section>
     <hr>
 
@@ -104,6 +101,12 @@
     <section>
         <h2>Gallerie</h2>
             <ul class="gallery">
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/alexpics1jpg.jpg" class="img-fluid">
+                </li>
+                <li>
+                    <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/alexPics-2.jpg" class="img-fluid">
+                </li>
                 <li>
                     <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/gal1.jpg" class="img-fluid">
                 </li>
