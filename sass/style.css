@@ -194,10 +194,6 @@ a:hover::after {
   animation: rotate 1.8s infinite linear;
 }
 
-.isPlaying {
-  animation: rotate 1.8s infinite linear;
-}
-
 .center-hole {
   position: absolute;
   top: 50%;
