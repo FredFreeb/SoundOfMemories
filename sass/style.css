@@ -1,7 +1,3 @@
-body {
-  text-align: center;
-}
-
 *,
 *::before,
 *::after {
@@ -9,6 +5,7 @@ body {
 }
 
 body {
+  text-align: center;
   font-family: "Saira Extra Condensed", sans-serif;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
@@ -41,20 +38,22 @@ a {
   position: relative;
   padding: 1rem 0 0.5rem;
   margin: 0 1.5rem;
+  border-radius: 25%;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
 a::after {
   content: "";
-  position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%) scaleX(0);
   transform-origin: 50% 50%;
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  border-radius: 25%;
+  background-color: rgba(6, 125, 42, 0.8);
   transition: transform 250ms;
 }
 a:hover::after {
@@ -79,9 +78,8 @@ a:hover::after {
 }
 
 .contact-form-container {
-  background-image: url("/assets/enveloppe.jpg");
+  background-image: url("https://raw.githubusercontent.com/FredFreeb/assets/SOM/enveloppe.jpg");
   background-size: cover;
-  border-radius: 20%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(93, 159, 13, 0.3);
   background-position: center;
@@ -107,7 +105,8 @@ a:hover::after {
 
 #bio {
   background-image: url("https://raw.githubusercontent.com/FredFreeb/assets/SOM/bio.jpg");
-  background-size: contain;
+  background-size: cover;
+  height: 100vh;
 }
 
 .box:hover .cover {
@@ -154,6 +153,15 @@ a:hover::after {
   border: 1px solid rgba(4, 135, 81, 0.3);
 }
 
+.carousel-item {
+  align-items: center;
+}
+
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #vinylPlayer {
   margin-top: 5%;
 }
@@ -181,9 +189,10 @@ a:hover::after {
   width: 100%;
   padding-bottom: 100%;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/vinyl.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  animation: rotate 1.8s infinite linear;
 }
 
 .isPlaying {
@@ -260,109 +269,4 @@ li {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.carousel {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-}
-.carousel .slick-prev, .carousel .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  padding: 0;
-  cursor: pointer;
-  z-index: 1;
-}
-.carousel .slick-prev:before, .carousel .slick-next:before {
-  content: "";
-  display: block;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  font-size: 13px;
-  color: white;
-}
-.carousel .slick-prev {
-  left: 10px;
-}
-.carousel .slick-prev:before {
-  content: "\f104";
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-}
-.carousel .slick-next {
-  right: 10px;
-}
-.carousel .slick-next:before {
-  content: "\f105";
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-}
-.carousel .slick-dots {
-  position: absolute;
-  bottom: 20px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-.carousel .slick-dots li {
-  position: relative;
-  display: inline-block;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-.carousel .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 2%;
-  height: 2%;
-  padding: 1%;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-}
-.carousel .slick-dots li button:hover, .carousel .slick-dots li button:focus {
-  outline: none;
-}
-.carousel .slick-dots li.slick-active button {
-  background-color: white;
-}
-.carousel .slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none;
-}
-.carousel .slick-slide img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-.carousel .slick-slide.slick-active {
-  display: block;
-}
-.carousel .slick-initialized {
-  display: block;
 }/*# sourceMappingURL=style.css.map */

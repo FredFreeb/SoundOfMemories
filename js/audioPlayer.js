@@ -1,3 +1,4 @@
+console.log('je suis dans audioPlayer.js')
 document.addEventListener('DOMContentLoaded', function () {
 
   const CLIENT_ID = '658de159b9804a9d92bf09f4721eb739'; // Votre client ID
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           console.log('je suis 2eme fetch de spotifyJS')
           if (albums && albums.length > 0) { // Vérifier que "albums" est défini et non vide
-            console.log('je suis dans if albums de js et je demande :'+ albums.items); // affiche les IDs et les images des albums dans la console
+            console.log('je suis dans if albums de js et je demande :'+ albums); // affiche les IDs et les images des albums dans la console
         
             // Mettre à jour le titre et la pochette de l'album
             const albumArt = document.querySelector('.album-art');
@@ -101,18 +102,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 //////////////////// Ecouter l'iframe et animer css rotate Vinyl
-// // Récupérer l'iframe de Spotify à partir de son ID
-// let spotifyIframe = document.getElementById('spotify-iframe-container');
 
-// // Accéder à la fenêtre interne de l'iframe
-// let spotifyWindow = spotifyIframe.contentWindow;
+const audio = document.getElementById('audio');
+const animation = document.getElementById('isPlaying');
+console.log('Hello eventListener')
+audio.addEventListener('play', () => {
+  animation.style.animationPlayState = 'running';
+});
 
-// // Récupérer l'élément HTML du bouton Play de Spotify à partir de l'iframe
-// let playButton = spotifyWindow.document.querySelector('.spotify-play-button');
+audio.addEventListener('pause', () => {
+  animation.style.animationPlayState = 'paused';
+});
 
-// // Ajouter un gestionnaire d'événements onclick pour le bouton Play
-// playButton.onclick = function() {
-//   // Agir sur la classe scss isPlaying
-//   let isPlayingElement = document.querySelector('.isPlaying');
-//   isPlayingElement.classList.add('active');
-// };
+audio.addEventListener('ended', () => {
+  animation.style.animationPlayState = 'paused';
+});

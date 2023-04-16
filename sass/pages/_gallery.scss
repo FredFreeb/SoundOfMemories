@@ -24,10 +24,10 @@
 	width: 100%;
 	padding-bottom: 100%;
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/83141/vinyl.png');
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	// animation: rotate 1.8s infinite linear;
+	animation: rotate 1.8s infinite linear;
 }
 .isPlaying{
 	animation: rotate 1.8s infinite linear;
@@ -98,114 +98,3 @@ li{
 	object-fit: cover;
 }
 ////////////////////// SECTION 3: CAROUSEL YOUTUBE
-.carousel {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-	overflow: hidden;
-	
-	.slick-prev, .slick-next {
-	font-size: 0;
-	line-height: 0;
-	position: absolute;
-	top: 50%;
-	display: block;
-	width: 20px;
-	height: 20px;
-	margin-top: -10px;
-	padding: 0;
-	cursor: pointer;
-	z-index: 1;
-	
-	&:before {
-		content: '';
-		display: block;
-		background-color: rgba(0,0,0,.4);
-		border-radius: 50%;
-		width: 20px;
-		height: 20px;
-		line-height: 20px;
-		text-align: center;
-		font-size: 13px;
-		color: white;
-	}
-	}
-	
-	.slick-prev {
-	left: 10px;
-	&:before {
-		content: '\f104';
-		font-family: 'FontAwesome';
-		font-style: normal;
-		font-weight: normal;
-	}
-	}
-	
-	.slick-next {
-	right: 10px;
-	&:before {
-		content: '\f105';
-		font-family: 'FontAwesome';
-		font-style: normal;
-		font-weight: normal;
-	}
-	}
-	
-	.slick-dots {
-	position: absolute;
-	bottom: 20px;
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	li {
-		position: relative;
-		display: inline-block;
-		margin: 0 5px;
-		padding: 0;
-		cursor: pointer;
-		button {
-		font-size: 0;
-		line-height: 0;
-		display: block;
-		width: 10px;
-		height: 10px;
-		padding: 5px;
-		cursor: pointer;
-		color: transparent;
-		border: 0;
-		outline: none;
-		background-color: rgba(0,0,0,.4);
-		border-radius: 50%;
-		&:hover, &:focus {
-			outline: none;
-		}
-		}
-		&.slick-active button {
-		background-color: white;
-		}
-	}
-	}
-	
-	.slick-slide {
-	float: left;
-	height: 100%;
-	min-height: 1px;
-	display: none;
-	img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-		margin: 0 auto;
-	}
-	&.slick-active {
-		display: block;
-	}
-	}
-	
-	.slick-initialized {
-	display: block;
-	}
-}
