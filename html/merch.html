@@ -95,8 +95,8 @@
                     </button>
                 </div>
                 
-        <!-- End Banner Hero -->
-        </section>
+            </section>
+    <!-- End Banner Hero -->
         <section>
         <!-- Start goodies shop-->
             <div class="row bg-black text-white">
@@ -107,12 +107,12 @@
                 </div>
                 <div class="col-12 col-md-4 p-5 mt-3">
                     <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/SofShoes2.jpg" class="rounded-circle h-50 img-fluid border" alt="shoes">
-                    <h2 class="h5 text-center mt-3 mb-3">Sneakers</h2>
+                    <h5 class="text-center mt-3 mb-3">Sneakers</h5>
                     <p class="text-center"><a class="btn btn-success">Ajouter</a></p>
                 </div>
                 <div class="col-12 col-md-4 p-5 mt-3">
                     <img src="https://raw.githubusercontent.com/FredFreeb/assets/SOM/vueTShirt.png" class="rounded-circle h-50 w-75 img-fluid border" alt="t-shirt">
-                    <h2 class="h5 text-center mt-3 mb-3">Accessoires</h2>
+                    <h5 class="text-center mt-3 mb-3">Accessoires</h5>
                     <p class="text-center"><a class="btn btn-success">Ajouter </a></p>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                                 <div style="width: 80%;">
                                     <h5 class="mb-0">€20</h5>
                                 </div>
-                                <a href="#!" style="color: #cecece;"><span class="fas fa-trash-alt"></span></a>
+                                <a href="#!" style="color: #cecece;" aria-label="je ne veux plus du produits"><span class="fas fa-trash-alt"></span></a>
                                 </div>
                             </div>
                             </div>
@@ -194,7 +194,7 @@
                                 <div style="width: 80%;">
                                     <h5 class="mb-0">€140</h5>
                                 </div>
-                                <a href="#!" style="color: #cecece;"><span class="fas fa-trash-alt"></span></a>
+                                <a href="#!" style="color: #cecece;" aria-label="je ne veux plus du produits"><span class="fas fa-trash-alt"></span></a>
                                 </div>
                             </div>
                             </div>
@@ -212,13 +212,13 @@
                             </div>
         
                             <p class="small mb-2">Card type</p>
-                            <a href="#!" class="text-white"><span
+                            <a href="#!" class="text-white" aria-label="master card"><span
                                 class="fab fa-cc-mastercard fa-2x me-2"></span></a>
-                            <a href="#!" class="text-white"><span
+                            <a href="#!" class="text-white" aria-label="visa"><span
                                 class="fab fa-cc-visa fa-2x me-2"></span></a>
-                            <a href="#!" class="text-white"><span
+                            <a href="#!" class="text-white" aria-label="american card"><span
                                 class="fab fa-cc-amex fa-2x me-2"></span></a>
-                            <a href="#!" class="text-white"><span class="fab fa-cc-paypal fa-2x"></span></a>
+                            <a href="#!" class="text-white" aria-label="paypal"><span class="fab fa-cc-paypal fa-2x"></span></a>
         
                             <form class="mt-4">
                                 <div class="form-outline form-white mb-4">
@@ -228,24 +228,24 @@
                                 </div>
         
                                 <div class="form-outline form-white mb-4">
-                                <input type="text" id="typeText2" class="form-control form-control-lg" size="17"
+                                <input type="text" id="cardNumber" class="form-control form-control-lg" size="17"
                                     placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" >
-                                <label class="form-label" for="typeText">Card Number</label>
+                                <label class="form-label" for="cardNumber">Card Number</label>
                                 </div>
         
                                 <div class="row mb-4">
                                 <div class="col-md-6">
                                     <div class="form-outline form-white">
-                                    <input type="text" id="typeExp2" class="form-control form-control-lg"
+                                    <input type="text" id="expiration" class="form-control form-control-lg"
                                         placeholder="MM/YYYY" size="7" minlength="7" maxlength="7" >
-                                    <label class="form-label" id="typeExp">Expiration</label>
+                                    <label class="form-label"  for="expiration">Expiration</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-outline form-white">
-                                    <input type="password" id="typeText" class="form-control form-control-lg"
+                                    <input type="text" id="password" class="form-control form-control-lg"
                                         placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" >
-                                    <label class="form-label" for="typeText">Cvv</label>
+                                    <label class="form-label" for="password">Cvv</label>
                                     </div>
                                 </div>
                                 </div>
