@@ -5,6 +5,8 @@
 }
 
 body {
+    background-image: url('https://raw.githubusercontent.com/FredFreeb/assets/SOM/htmlwallpaper.jpg');
+    background-size: cover;
     text-align: center;
     font-family: 'Saira Extra Condensed', sans-serif;
     letter-spacing: 1px;
@@ -33,7 +35,6 @@ li, .dropdown-menu, .collapse,  .show {
         flex-direction: column;
 }
 a {
-    position: relative;
     padding: 1rem 0 0.5rem;
     margin: 0 1.5rem;
     border-radius: 25%;
@@ -81,3 +82,6 @@ a {
     display: none;
 }
 
+#mentions main a {
+    color: rgba(6, 125, 42, 0.8) ;
+}
