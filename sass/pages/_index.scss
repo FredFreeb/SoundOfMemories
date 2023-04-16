@@ -35,6 +35,7 @@ li, .dropdown-menu, .collapse,  .show {
         flex-direction: column;
 }
 a {
+    position: relative;
     padding: 1rem 0 0.5rem;
     margin: 0 1.5rem;
     border-radius: 25%;
@@ -43,6 +44,7 @@ a {
     text-transform: uppercase;
 
 &::after {
+    position: absolute;
     content: '';
     left: 50%;
     bottom: 0;
@@ -80,8 +82,4 @@ a {
 
 .hidden {
     display: none;
-}
-
-#mentions main a {
-    color: rgba(6, 125, 42, 0.8) ;
 }
