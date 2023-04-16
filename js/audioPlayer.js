@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     iframeContainer.innerHTML = ''; // Supprimer l'ancien iframe
                     let iframe = document.createElement('iframe');
                     iframe.setAttribute('src', `https://open.spotify.com/embed/album/${selectedAlbum.id}`);
-                    iframe.setAttribute('width', '300');
-                    iframe.setAttribute('height', '380');
+                    iframe.setAttribute('width', '100%');
+                    iframe.setAttribute('height', '360');
                     iframe.setAttribute('frameborder', '0');
                     iframe.setAttribute('allowtransparency', 'true');
                     iframe.setAttribute('allow', 'encrypted-media');
