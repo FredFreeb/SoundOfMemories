@@ -191,7 +191,6 @@ a:hover::after {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  animation: rotate 1.8s infinite linear;
 }
 
 .center-hole {
