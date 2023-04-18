@@ -67,7 +67,7 @@
 
 //     figure.style.transform = `rotateY(${currImage * -theta}rad)`;
 // }
-var carousel = document.querySelector(".carousel"),
+let carousel = document.querySelector(".carousel"),
     figure = carousel.querySelector("figure"),
     nav = carousel.querySelector("nav"),
     numImages = figure.childElementCount,
@@ -78,7 +78,7 @@ var carousel = document.querySelector(".carousel"),
     function onClick(e) {
         e.stopPropagation();
 
-    var t = e.target;
+    let t = e.target;
     if (t.tagName.toUpperCase() != "BUTTON") return;
     
     if (t.classList.contains("next")) {
