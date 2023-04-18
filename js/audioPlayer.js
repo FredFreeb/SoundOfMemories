@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     iframeContainer.innerHTML = ''; // Supprimer l'ancien iframe
                     let iframe = document.createElement('iframe');
                     iframe.setAttribute('src', `https://open.spotify.com/embed/album/${selectedAlbum.id}`);
-                    iframe.setAttribute('width', '100%');
+                    iframe.setAttribute('width', '95%');
                     iframe.setAttribute('height', '360');
                     iframe.setAttribute('frameborder', '0');
                     iframe.setAttribute('allowtransparency', 'true');
@@ -103,17 +103,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 //////////////////// Ecouter l'iframe et animer css rotate Vinyl
 
-const audio = document.getElementById('audio');
-const animation = document.getElementById('isPlaying');
-console.log('Hello eventListener')
-audio.addEventListener('play', () => {
-  animation.style.animationPlayState = 'running';
-});
+// const audio = document.getElementById('audio');
+// const animation = document.getElementById('isPlaying');
+// console.log('Hello eventListener')
+// audio.addEventListener('play', () => {
+//   animation.style.animationPlayState = 'running';
+// });
 
-audio.addEventListener('pause', () => {
-  animation.style.animationPlayState = 'paused';
-});
+// audio.addEventListener('pause', () => {
+//   animation.style.animationPlayState = 'paused';
+// });
 
-audio.addEventListener('ended', () => {
-  animation.style.animationPlayState = 'paused';
-});
+// audio.addEventListener('ended', () => {
+//   animation.style.animationPlayState = 'paused';
+// });

@@ -2,11 +2,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 html{
-    width: 100vw;
-    background-image: url('https://raw.githubusercontent.com/FredFreeb/assets/SOM/htmlwallpaper.jpg');
-    background-repeat: no-repeat;
     scroll-behavior: smooth;
 }
 body {
