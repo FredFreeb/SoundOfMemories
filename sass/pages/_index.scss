@@ -3,10 +3,14 @@
 *::after {
     box-sizing: border-box;
 }
-
-body {
+html{
+    width: 100vw;
     background-image: url('https://raw.githubusercontent.com/FredFreeb/assets/SOM/htmlwallpaper.jpg');
-    background-size: cover;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+body {
+
     text-align: center;
     font-family: 'Saira Extra Condensed', sans-serif;
     letter-spacing: 1px;

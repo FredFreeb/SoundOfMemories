@@ -23,10 +23,9 @@ console.log(data.items)
             const active = index === 0 ? "active" : "";
             const videoElement = `
             <div class="carousel-item ${active}">
-                <iframe width="100%" height:"700" src="https://www.youtube.com/embed/${video.id.videoId}" title="${video.snippet.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="98%" height:"800" src="https://www.youtube.com/embed/${video.id.videoId}" title="${video.snippet.title}"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             `;
-
             document.getElementById("carouselInner").innerHTML += videoElement;
         });
     } else {
